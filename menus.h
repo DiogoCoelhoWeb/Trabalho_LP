@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/cFiles/file.h to edit this template
  */
 
+#include <stdio.h>
+#include <stdlib.h>
+
 /**@file menus.h
  * @author Diogo Coelho
  * @version 1.0
@@ -12,7 +15,25 @@
 #ifndef MENUS_H
 #define MENUS_H
 
-int menu(int num_op, char *title, char *op_array[]);
+#define PROFILE_OPTION_SIZE 2
+#define ADMIN_OPTION_SIZE   4
+#define USER_OPTION_SIZE    4
+
+typedef enum {
+    FALSE,
+    TRUE
+} bool;
+
+enum Profiles {
+    ADMIN = 1,
+    USER
+};
+
+int menu(int num_op, char *title, const char *op_array[]);
+
+void admin_menu(int *main_op);
+
+void user_menu(int *main_op);
 
 void main_menu();
 
