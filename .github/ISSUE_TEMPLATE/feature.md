@@ -1,7 +1,7 @@
 ---
 name: Feature
 about: Feature to be developped
-title: 'Função '
+title: "[FEATURE] Função "
 labels: feature
 assignees: ''
 
