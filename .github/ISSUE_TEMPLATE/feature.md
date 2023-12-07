@@ -1,10 +1,10 @@
 ---
 name: Feature
 about: Feature to be developped
-title: ''
+title: 'Função '
 labels: feature
 assignees: ''
 
 ---
 
-Criar a função FUNÇÃO
+Criar a função
