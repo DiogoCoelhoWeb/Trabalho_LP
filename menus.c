@@ -150,8 +150,6 @@ void admin_menu(int *main_op) {
 
 /*USER OPTIONS*/
 
-//TODO: Create the user options menu structure and program logic
-
 void user_menu(int *main_op) {
     int op;
 
@@ -180,6 +178,8 @@ void user_menu(int *main_op) {
         }
     } while (op != 0 && op != 4 && *main_op != 0);
 }
+
+/*MAIN MENU*/
 
 void main_menu() {
 
