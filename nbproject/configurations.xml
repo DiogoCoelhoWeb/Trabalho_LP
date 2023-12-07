@@ -4,6 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>company.h</itemPath>
+      <itemPath>menus.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,6 +15,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>main.c</itemPath>
+      <itemPath>menus.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -36,7 +39,13 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="company.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menus.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menus.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -59,7 +68,13 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="company.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menus.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="menus.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
