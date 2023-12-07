@@ -23,7 +23,7 @@ const char *USER_OPTIONS[USER_OPTION_SIZE] = {"Search Company", "Rate Company", 
 
 //Admin menu
 const char *MANAGE_CATALOG_OPTIONS[MANAGE_CATALOG_OPTION_SIZE] = {"Create Company", "Edit Company", "Remove Company", "Go Back"};
-const char *MANAGE_ACT_BRANCH_OPTIONS[MANAGE_ACT_BRANCH_OPTION_SIZE] = {"Create Activity Branch", "Edit Activity Branch", "Remove Activity Branch", "Go Back"};
+const char *MANAGE_ACT_BRANCH_OPTIONS[MANAGE_ACT_BRANCH_OPTION_SIZE] = {"Create Activity Branch", "Edit Activity Branch", "Remove Activity Branch", "Reactivate Activity Branch","Go Back"};
 
 void print_menu(int num_op, char *title, const char *op_array[]) {
     printf("%s ", title);
@@ -107,13 +107,16 @@ void manage_act_branches(int *main_op) {
                 break;
 
             case 4:
+                //TODO: reactivate_act_branch();
+                break;
+            case 5:
                 break;
 
             case 0:
                 *main_op = 0;
                 break;
         }
-    } while (op != 0 && op != 4 && *main_op != 0);
+    } while (op != 0 && op != 5 && *main_op != 0);
 }
 
 void admin_menu(int *main_op) {
