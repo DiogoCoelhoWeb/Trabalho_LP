@@ -38,6 +38,15 @@ enum Profiles {
 };
 
 /**
+ * @brief Prints the text of the generalized menu with all the options associated
+ * @param num_op Number of options
+ * @param title Title of the menu
+ * @param op_array Array with the name of each option
+ * @return Returns the option selected by the user
+ */
+void print_menu(int num_op, char *title, const char *op_array[]);
+
+/**
  * @brief This function is a generalized way of generating a menu given a number of options and thier respective text
  * @param num_op Number of options
  * @param title Title of the menu
