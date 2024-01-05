@@ -61,7 +61,7 @@ int menu(int num_op, char *title, const char *op_array[]);
  * @brief This function generates the menu for the company catalog management
  * @param main_op
  */
-void manage_comp_catalog(int *main_op);
+void manage_comp_catalog(int *main_op, Companies *companies);
 
 /**
  * @brief This function generates the menu for the activity branch management
@@ -75,20 +75,20 @@ void manage_act_branches(int *main_op);
  * @brief This function generates the menu for the profile ADMIN
  * @param main_op
  */
-void admin_menu(int *main_op);
+void admin_menu(int *main_op, Companies *companies);
 
 /**
  * @brief This function generates the menu for the profile USER
  * @param main_op
  */
-void user_menu(int *main_op);
+void user_menu(int *main_op, Companies *companies);
 
 /*MAIN MENU*/
 
 /**
  * @brief This function generates the application's main menu and waits for a user to choose an option to start
  */
-void main_menu();
+void main_menu(Companies *companies);
 
 #endif /* MENUS_H */
 

@@ -13,6 +13,7 @@
 #include <string.h>
 
 #include "menus.h"
+#include "company.h"
 
 //Main menu
 const char *PROFILE_OPTIONS[PROFILE_OPTION_SIZE] = {"Administrator", "User"};
@@ -58,7 +59,7 @@ int menu(int num_op, char *title, const char *op_array[]) {
 
 /*ADMIN OPTIONS*/
 
-void manage_comp_catalog(int *main_op) {
+void manage_comp_catalog(int *main_op, Companies *companies) {
     int op;
 
     do {
@@ -66,15 +67,15 @@ void manage_comp_catalog(int *main_op) {
 
         switch (op) {
             case 1:
-                //TODO: insert_company();
+                insert_comp(companies);
                 break;
 
             case 2:
-                //TODO: edit_company();
+                edit_comp(companies, main_op);
                 break;
 
             case 3:
-                //TODO: remove_company();
+                //TODO: remove_comp();
                 break;
 
             case 4:
@@ -119,9 +120,11 @@ void manage_act_branches(int *main_op) {
     } while (op != 0 && op != 5 && *main_op != 0);
 }
 
-void admin_menu(int *main_op) {
+void admin_menu(int *main_op, Companies *companies) {
     int op;
 
+    clear_screen();
+    
     do {
         op = menu(ADMIN_OPTION_SIZE, "Administrator", ADMIN_OPTIONS);
 
@@ -150,9 +153,11 @@ void admin_menu(int *main_op) {
 
 /*USER OPTIONS*/
 
-void user_menu(int *main_op) {
+void user_menu(int *main_op, Companies *companies) {
     int op;
 
+    clear_screen();
+    
     do {
         op = menu(USER_OPTION_SIZE, "User", USER_OPTIONS);
 
@@ -181,7 +186,7 @@ void user_menu(int *main_op) {
 
 /*MAIN MENU*/
 
-void main_menu() {
+void main_menu(Companies *companies) {
 
     int op;
 
