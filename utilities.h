@@ -13,10 +13,6 @@
 #ifndef UTILITIES_H
 #define UTILITIES_H
 
-void pause_exec();
-
-void clear_screen();
-
 /**
  * @brief Prints the text of the generalized menu with all the options associated
  * @param num_op Number of options
@@ -34,11 +30,6 @@ void print_menu(int num_op, char *title, const char *op_array[]);
  * @return Returns the option selected by the user
  */
 int menu(int num_op, char *title, const char *op_array[]);
-
-int confirm_menu(char *title, int exit);
-
-void print_confirm_menu(char *title, int exit);
-
 
 #endif /* UTILITIES_H */
 
