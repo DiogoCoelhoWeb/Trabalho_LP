@@ -5,7 +5,9 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>company.h</itemPath>
+      <itemPath>input.h</itemPath>
       <itemPath>menus.h</itemPath>
+      <itemPath>utilities.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -14,8 +16,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>company.c</itemPath>
+      <itemPath>input.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>menus.c</itemPath>
+      <itemPath>utilities.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -39,13 +44,23 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="company.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="company.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="input.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="input.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="menus.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="menus.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="utilities.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="utilities.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -68,13 +83,23 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="company.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="company.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="input.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="input.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="menus.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="menus.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="utilities.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="utilities.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
