@@ -43,6 +43,9 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <commandLine>-pedantic -Wall -Wextra</commandLine>
+        </cTool>
       </compileType>
       <item path="company.c" ex="false" tool="0" flavor2="0">
       </item>

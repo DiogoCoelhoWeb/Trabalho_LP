@@ -16,7 +16,25 @@
  */
 int main() {
 
-    main_menu();
+    Companies companies;
+
+    companies.n_comp = 0;
+    companies.comp_mem_size = 0;
+    companies.companies = NULL;
+
+    companies.companies = malloc(sizeof(Company));
+
+    if (companies.companies != NULL) {
+        companies.comp_mem_size = 1;
+        
+        main_menu(&companies);   
+        
+        free(companies.companies);
+    } else {
+        puts("Error starting the program!(Memory allocation failed)");
+    }
     
+    printf("\nExiting ...\n");
+
     return (EXIT_SUCCESS);
 }
