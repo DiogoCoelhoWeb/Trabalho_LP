@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "company.h"
 
 /**@file menus.h
  * @author Diogo Coelho
