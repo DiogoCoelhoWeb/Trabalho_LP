@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "company.h"
 
 #include "company.h"
 
@@ -25,7 +26,7 @@
 #define USER_OPTION_SIZE              4
 
 //Admin menu
-#define MANAGE_CATALOG_OPTION_SIZE    4
+#define MANAGE_CATALOG_OPTION_SIZE    5
 #define MANAGE_ACT_BRANCH_OPTION_SIZE 5
 #define SHOW_REPORTS_OPTION_SIZE      4
 
@@ -40,7 +41,7 @@ enum Profiles {
  * @brief This function generates the menu for the company catalog management
  * @param main_op
  */
-void manage_comp_catalog(int *main_op, Companies companies);
+void manage_comp_catalog(int *main_op, Companies *companies);
 
 /**
  * @brief This function generates the menu for the activity branch management
@@ -54,13 +55,13 @@ void manage_act_branches(int *main_op);
  * @brief This function generates the menu for the profile ADMIN
  * @param main_op
  */
-void admin_menu(int *main_op, Companies companies);
+void admin_menu(int *main_op, Companies *companies);
 
 /**
  * @brief This function generates the menu for the profile USER
  * @param main_op
  */
-void user_menu(int *main_op, Companies companies);
+void user_menu(int *main_op, Companies *companies);
 
 /*MAIN MENU*/
 

@@ -14,6 +14,16 @@
 #define UTILITIES_H
 
 /**
+ * @brief Clears the console text
+ */
+void clear_screen();
+
+/**
+ * @brief Stops the code until the user presses ENTER
+ */
+void pause_exec();
+
+/**
  * @brief Prints the text of the generalized menu with all the options associated
  * @param num_op Number of options
  * @param title Title of the menu
@@ -30,6 +40,14 @@ void print_menu(int num_op, char *title, const char *op_array[]);
  * @return Returns the option selected by the user
  */
 int menu(int num_op, char *title, const char *op_array[]);
+
+/**
+ * @brief Shows a confirmation menu
+ * @param msg The title of the menu
+ * @param cancel Cancel option(shows the Cancel option in the menu when not 0)
+ * @return Return the option the user picked
+ */
+int confirm_menu(char *msg, int cancel);
 
 #endif /* UTILITIES_H */
 
