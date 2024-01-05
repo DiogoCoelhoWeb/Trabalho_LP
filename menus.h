@@ -26,7 +26,7 @@
 #define USER_OPTION_SIZE              4
 
 //Admin menu
-#define MANAGE_CATALOG_OPTION_SIZE    4
+#define MANAGE_CATALOG_OPTION_SIZE    5
 #define MANAGE_ACT_BRANCH_OPTION_SIZE 5
 #define SHOW_REPORTS_OPTION_SIZE      4
 

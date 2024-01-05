@@ -155,5 +155,11 @@ void edit_comp(Companies *companies, int *main_op);
  */
 void remove_comp(Companies *companies);
 
+/**
+ * @brief Shows all companies stored in the company array with the show_comp(Company company) function
+ * @param companies The company array
+ */
+void list_comp(Companies companies);
+
 #endif /* COMPANY_H */
 
