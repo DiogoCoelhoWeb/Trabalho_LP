@@ -18,7 +18,7 @@
 #ifndef COMPANY_H
 #define COMPANY_H
 
-#define COMPANY_SIZE              10
+#define COMPANY_MULT_FACTOR       2
 #define COMPANY_NAME_SIZE         50
 #define COMPANY_STREET_SIZE       100
 #define COMPANY_LOCALITY_SIZE     50
@@ -55,7 +55,7 @@ typedef struct {
 } Act_Branch;
 
 typedef struct {
-    int nota;
+    int rating;
     char nameUser[NAME_USER_SIZE];
     char emailUser[EMAIL_USER_SIZE];
 } Classification;
@@ -87,7 +87,8 @@ typedef struct {
 
 typedef struct {
     int n_comp;
-    Company companies[COMPANY_SIZE];
+    int comp_mem_size;
+    Company *companies;
 } Companies;
 
 char *print_category(int i);
