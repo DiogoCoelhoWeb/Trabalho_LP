@@ -110,8 +110,9 @@ void show_comp(Company company);
  * @param phrase Message to be shown to the user
  * @param menu_phrase Message to be shown in the confirmation menu
  * @param size The size of the string to be edited
+ * @return Returns 1 if the value changed or 0 otherwise
  */
-void get_edit_string(Company *comp, char *str, char *phrase, char *menu_phrase, int size);
+int get_edit_string(Company *comp, char *str, char *phrase, char *menu_phrase, int size);
 
 /**
  * @brief Reads and confirms the new category for a company
@@ -119,14 +120,16 @@ void get_edit_string(Company *comp, char *str, char *phrase, char *menu_phrase, 
  * @param cat The current category in a company
  * @param phrase Message to be shown to the user
  * @param menu_phrase Message to be shown in the confirmation menu
+ * @return Returns 1 if the value changed or 0 otherwise
  */
-void get_edit_cat(Company *comp, Category *cat, char *phrase, char *menu_phrase);
+int get_edit_cat(Company *comp, Category *cat, char *phrase, char *menu_phrase);
 
 /**
  * @brief Changes the company active state to Active or Inactive
  * @param company The company where the active state will be changed
+ * @return Returns 1 if the value changed or 0 otherwise
  */
-void change_state(Company *company);
+int change_state(Company *company);
 
 /**
  * @brief Searches if a company exists in the Companies array
