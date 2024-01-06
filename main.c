@@ -10,6 +10,7 @@
 
 #include "menus.h"
 #include "company.h"
+#include "log_gen.h"
 
 /*
  * 
@@ -23,6 +24,8 @@ int main() {
     companies.companies = NULL;
 
     companies.companies = malloc(sizeof(Company));
+    
+    logMsg("Starting program ------------------------------------------------", NOLEVEL, LOG_FILE);
 
     if (companies.companies != NULL) {
         companies.comp_mem_size = 1;
@@ -31,9 +34,11 @@ int main() {
         
         free(companies.companies);
     } else {
+        logMsg("Error allocating memmory on the heap!(malloc failed)", ERROR, LOG_FILE);
         puts("Error starting the program!(Memory allocation failed)");
     }
     
+    logMsg("Exiting program  ------------------------------------------------\n", NOLEVEL, LOG_FILE);
     printf("\nExiting ...\n");
 
     return (EXIT_SUCCESS);
