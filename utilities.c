@@ -21,7 +21,7 @@ void pause_exec(){
 void print_menu(int num_op, char *title, const char *op_array[]) {
     printf("%s ", title);
 
-    for (int i = 0; i < 39 - (int) strlen(title); i++) {
+    for (int i = 0; i < 64 - (int) strlen(title); i++) {
         printf("-");
     }
 
@@ -32,7 +32,7 @@ void print_menu(int num_op, char *title, const char *op_array[]) {
     }
 
     printf("  [0] Exit\n");
-    printf("----------------------------------------\n\n");
+    printf("-----------------------------------------------------------------\n\n");
 }
 
 int menu(int num_op, char *title, const char *op_array[]) {
@@ -47,7 +47,14 @@ int menu(int num_op, char *title, const char *op_array[]) {
 
 int confirm_menu(char *msg, int cancel) {
 
-    printf("%s -----\n", msg);
+    printf("%s ", msg);
+    
+    for(int i = 0; i < 64 - (int) strlen(msg); i++){
+        printf("-");
+    }
+    
+    printf("\n");
+    
     printf("  1 -> Yes\n");
     printf("  2 -> No\n");
 
@@ -55,11 +62,7 @@ int confirm_menu(char *msg, int cancel) {
         printf("  0 -> Cancel\n");
     }
 
-    for (int i = 0; i < (int) strlen(msg); i++) {
-        printf("-");
-    }
-
-    printf("------\n\n");
+    printf("-----------------------------------------------------------------\n\n");
     
     if(cancel){
         return getInt(0, 2, "-> ");

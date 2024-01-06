@@ -29,11 +29,11 @@ int read_cat(char *phrase) {
     int category;
 
     do {
-        puts("Categories ------------");
+        puts("Categories ------------------------------------------------------");
         for (int i = 0; i < CATEGORY; i++) {
             printf("  %d - %s\n", i + 1, print_category(i));
         }
-        puts("-----------------------");
+        puts("-----------------------------------------------------------------");
 
         category = getInt(1, CATEGORY, phrase);
 
@@ -144,7 +144,7 @@ void insert_comp(Companies *companies) {
 
     clear_screen();
 
-    puts("Create Company -------------------------");
+    puts("Create Company --------------------------------------------------");
     NIF = getInt(100000000, 999999999, "Enter the companies NIF: ");
 
     if (search_comp(*companies, NIF) != -1) {
@@ -232,42 +232,42 @@ void edit_comp(Companies *companies, int *main_op) {
         switch (op) {
             case 1:
                 clear_screen();
-                puts("Edit Company ---------------------------");
+                puts("Edit Company ----------------------------------------------------");
                 get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].name, "Enter the new company's name: ", "Are you sure you want to keep the new name?", COMPANY_NAME_SIZE);
                 pause_exec();
                 break;
             case 2:
                 clear_screen();
-                puts("Edit Company ---------------------------");
+                puts("Edit Company ----------------------------------------------------");
                 //TODO: Activity Branch
                 pause_exec();
                 break;
             case 3:
                 clear_screen();
-                puts("Edit Company ---------------------------");
+                puts("Edit Company ----------------------------------------------------");
                 get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].address.street, "Enter the company's new street: ", "Are you sure you want to keep the new street?", COMPANY_STREET_SIZE);
                 pause_exec();
                 break;
             case 4:
                 clear_screen();
-                puts("Edit Company ---------------------------");
+                puts("Edit Company ----------------------------------------------------");
                 get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].address.locality, "Enter the company's new locality: ", "Are you sure you want to keep the new locality?", COMPANY_LOCALITY_SIZE);
                 break;
             case 5:
                 clear_screen();
-                puts("Edit Company ---------------------------");
+                puts("Edit Company ----------------------------------------------------");
                 get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].address.postal_code, "Enter the company's new postal_code: ", "Are you sure you want to keep the new postal_code?", 11);
                 pause_exec();
                 break;
             case 6:
                 clear_screen();
-                puts("Edit Company ---------------------------\n");
+                puts("Edit Company ----------------------------------------------------\n");
                 get_edit_cat(&(companies->companies[comp_position]), &(companies->companies[comp_position].category), "Enter the new company's category: ", "Are you sure you want to keep the new category?");
                 pause_exec();
                 break;
             case 7:
                 clear_screen();
-                puts("Edit Company ---------------------------\n");
+                puts("Edit Company ----------------------------------------------------\n");
                 change_state(companies->companies + comp_position);
                 break;
             case 8:
@@ -315,10 +315,10 @@ void remove_comp(Companies *companies) {
         clear_screen();
 
         if (companies->companies[comp_position].active) {
-            puts("--- Unable to delete the company because there are comments ---\nChanging state to Inactive!");
+            puts("---- Unable to delete the company because there are comments ----\nChanging state to Inactive!");
             companies->companies[comp_position].active = 0;
         } else {
-            puts("--- Unable to delete the company because there are comments ---\nThe company is already inactive!\nSkipping instruction!");
+            puts("---- Unable to delete the company because there are comments ----\nThe company is already inactive!\nSkipping instruction!");
         }
         pause_exec();
         return;
