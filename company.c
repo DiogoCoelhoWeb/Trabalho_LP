@@ -9,6 +9,7 @@
 
 #include "company.h"
 #include "utilities.h"
+#include "log_gen.h"
 
 const char *EDIT_COMP_OPTIONS[EDIT_COMP_OPTION_SIZE] = {"Name", "Activity Branch", "Street", "Locality", "Postal Code", "Category", "Enable/Disable", "Go Back"};
 
@@ -62,7 +63,7 @@ void show_comp(Company company) {
     printf("-----------------------------------------------------------------\n\n");
 }
 
-void get_edit_string(Company *comp, char *str, char *phrase, char *menu_phrase, int size) {
+int get_edit_string(Company *comp, char *str, char *phrase, char *menu_phrase, int size) {
 
     int confirm;
 
@@ -76,12 +77,13 @@ void get_edit_string(Company *comp, char *str, char *phrase, char *menu_phrase, 
         if (confirm == 1) {
             strncpy(str, aux, size);
             show_comp(*comp);
+            return 1;
         }
-
     } while (confirm != 1 && confirm != 0);
+    return 0;
 }
 
-void get_edit_cat(Company *comp, Category *cat, char *phrase, char *menu_phrase) {
+int get_edit_cat(Company *comp, Category *cat, char *phrase, char *menu_phrase) {
 
     int confirm;
     int cat_tmp;
@@ -95,12 +97,13 @@ void get_edit_cat(Company *comp, Category *cat, char *phrase, char *menu_phrase)
         if (confirm == 1) {
             *cat = cat_tmp;
             show_comp(*comp);
+            return 1;
         }
-
     } while (confirm != 1 && confirm != 0);
+    return 0;
 }
 
-void change_state(Company *company) {
+int change_state(Company *company) {
     if (company->active) {
         printf("The company %s is enabled!\n", company->name);
         if (confirm_menu("Are you sure you want to disbale the company?", 0) == 1) {
@@ -110,13 +113,16 @@ void change_state(Company *company) {
         clear_screen();
         show_comp(*company);
         pause_exec();
-        return;
+        return 1;
     }
 
     if (confirm_menu("Are you sure you want to enbale the company?", 0) == 1) {
         company->active = 1;
+        return 1;
     }
 
+    return 0;
+    
     clear_screen();
     show_comp(*company);
     pause_exec();
@@ -152,10 +158,14 @@ void insert_comp(Companies *companies) {
         return;
     }
 
+    logMsg("Trying to create company...", INFORMATIONAL, LOG_FILE);
+    
     if (companies->n_comp == companies->comp_mem_size) {
         companiestmp = (Company *) realloc(companies->companies, sizeof (Company) * (companies->comp_mem_size * COMPANY_MULT_FACTOR));
 
         if (companiestmp == NULL) {
+            logMsg("Failed to reallocate memory on the heap!(realloc failed)", ERROR, LOG_FILE);
+            logMsg("The company couldn't be created!", WARNING, LOG_FILE);
             puts("Error creating company!");
             return;
         }
@@ -182,6 +192,8 @@ void insert_comp(Companies *companies) {
     show_comp(companies->companies[companies->n_comp]);
     companies->n_comp++;
 
+    logMsg("Company created successfully!", INFORMATIONAL, LOG_FILE);
+    
     pause_exec();
 
 }
@@ -222,6 +234,8 @@ void edit_comp(Companies *companies, int *main_op) {
         }
         
     }while(confirm_comp != 1);
+    
+    logMsg("Trying to edit company...", INFORMATIONAL, LOG_FILE);
 
     do {
 
@@ -233,7 +247,9 @@ void edit_comp(Companies *companies, int *main_op) {
             case 1:
                 clear_screen();
                 puts("Edit Company ----------------------------------------------------");
-                get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].name, "Enter the new company's name: ", "Are you sure you want to keep the new name?", COMPANY_NAME_SIZE);
+                if(get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].name, "Enter the new company's name: ", "Are you sure you want to keep the new name?", COMPANY_NAME_SIZE)){
+                    logMsg("Changed the company's name", INFORMATIONAL, LOG_FILE);
+                }
                 pause_exec();
                 break;
             case 2:
@@ -245,30 +261,40 @@ void edit_comp(Companies *companies, int *main_op) {
             case 3:
                 clear_screen();
                 puts("Edit Company ----------------------------------------------------");
-                get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].address.street, "Enter the company's new street: ", "Are you sure you want to keep the new street?", COMPANY_STREET_SIZE);
+                if(get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].address.street, "Enter the company's new street: ", "Are you sure you want to keep the new street?", COMPANY_STREET_SIZE)){
+                    logMsg("Changed the company's street", INFORMATIONAL, LOG_FILE);
+                }
                 pause_exec();
                 break;
             case 4:
                 clear_screen();
                 puts("Edit Company ----------------------------------------------------");
-                get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].address.locality, "Enter the company's new locality: ", "Are you sure you want to keep the new locality?", COMPANY_LOCALITY_SIZE);
+                if(get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].address.locality, "Enter the company's new locality: ", "Are you sure you want to keep the new locality?", COMPANY_LOCALITY_SIZE)){
+                    logMsg("Changed the company's locality", INFORMATIONAL, LOG_FILE);
+                }
                 break;
             case 5:
                 clear_screen();
                 puts("Edit Company ----------------------------------------------------");
-                get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].address.postal_code, "Enter the company's new postal_code: ", "Are you sure you want to keep the new postal_code?", 11);
+                if(get_edit_string(&(companies->companies[comp_position]), companies->companies[comp_position].address.postal_code, "Enter the company's new postal_code: ", "Are you sure you want to keep the new postal_code?", 11)){
+                    logMsg("Changed the company's postal code", INFORMATIONAL, LOG_FILE);
+                }
                 pause_exec();
                 break;
             case 6:
                 clear_screen();
                 puts("Edit Company ----------------------------------------------------\n");
-                get_edit_cat(&(companies->companies[comp_position]), &(companies->companies[comp_position].category), "Enter the new company's category: ", "Are you sure you want to keep the new category?");
+                if(get_edit_cat(&(companies->companies[comp_position]), &(companies->companies[comp_position].category), "Enter the new company's category: ", "Are you sure you want to keep the new category?")){
+                    logMsg("Changed the company's category", INFORMATIONAL, LOG_FILE);
+                }
                 pause_exec();
                 break;
             case 7:
                 clear_screen();
                 puts("Edit Company ----------------------------------------------------\n");
-                change_state(companies->companies + comp_position);
+                if(change_state(companies->companies + comp_position)){
+                    logMsg("Changed the company's state", INFORMATIONAL, LOG_FILE);
+                }
                 break;
             case 8:
                 break;
@@ -278,6 +304,8 @@ void edit_comp(Companies *companies, int *main_op) {
         }
 
     } while (op != 0 && op != 8);
+    
+    logMsg("Edited the company successfuly!", INFORMATIONAL, LOG_FILE);
 
 }
 
@@ -310,14 +338,18 @@ void remove_comp(Companies *companies) {
         return;
     }
 
+    logMsg("Trying to remove company...", INFORMATIONAL, LOG_FILE);
+    
     if (companies->companies[comp_position].nComments != 0) {
 
         clear_screen();
 
         if (companies->companies[comp_position].active) {
+            logMsg("Couldn't remove company because it has comments", WARNING, LOG_FILE);
             puts("---- Unable to delete the company because there are comments ----\nChanging state to Inactive!");
             companies->companies[comp_position].active = 0;
         } else {
+            logMsg("Couldn't remove company because it has comments", WARNING, LOG_FILE);
             puts("---- Unable to delete the company because there are comments ----\nThe company is already inactive!\nSkipping instruction!");
         }
         pause_exec();
@@ -370,10 +402,14 @@ void remove_comp(Companies *companies) {
         if (companiestmp != NULL) {
             companies->companies = companiestmp;
             companies->comp_mem_size = companies->n_comp * COMPANY_MULT_FACTOR;
+        }else{
+            logMsg("Failed to reallocate the companies array!(realloc failed)", ERROR, LOG_FILE);
+            logMsg("The array couldn't be resized!", WARNING, LOG_FILE);
         }
     }
 
     clear_screen();
+    logMsg("Company successfuly deleted!", INFORMATIONAL, LOG_FILE);
     puts("Company successfully deleted!\n");
     pause_exec();
 }
@@ -388,11 +424,14 @@ void list_comp(Companies companies) {
         return;
     }
 
+    logMsg("Listing companies...", INFORMATIONAL, LOG_FILE);
     puts("List Companies --------------------------------------------------\n");
     
     for (int i = 0; i < companies.n_comp; i++) {
         show_comp(companies.companies[i]);
     }
+    
+    logMsg("Companies listed successfuly!", INFORMATIONAL, LOG_FILE);
 
     pause_exec();
 }

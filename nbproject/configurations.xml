@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>company.h</itemPath>
       <itemPath>input.h</itemPath>
+      <itemPath>log_gen.h</itemPath>
       <itemPath>menus.h</itemPath>
       <itemPath>utilities.h</itemPath>
     </logicalFolder>
@@ -18,6 +19,7 @@
                    projectFiles="true">
       <itemPath>company.c</itemPath>
       <itemPath>input.c</itemPath>
+      <itemPath>log_gen.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>menus.c</itemPath>
       <itemPath>utilities.c</itemPath>
@@ -54,6 +56,10 @@
       <item path="input.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="input.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="log_gen.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="log_gen.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -93,6 +99,10 @@
       <item path="input.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="input.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="log_gen.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="log_gen.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>

@@ -1,0 +1,64 @@
+[2024-01-08 10:19:18] Starting program ------------------------------------------------
+[2024-01-08 10:19:23] [INFORMATIONAL] Trying to create company...
+[2024-01-08 10:19:28] [INFORMATIONAL] Company created successfully!
+[2024-01-08 10:19:37] [INFORMATIONAL] Trying to remove company...
+[2024-01-08 10:19:37] [INFORMATIONAL] Company successfuly deleted!
+[2024-01-08 10:19:39] Exiting program  ------------------------------------------------
+
+[2024-01-08 10:20:17] Starting program ------------------------------------------------
+[2024-01-08 10:20:17] [ERROR] Error allocating memmory on the heap!(malloc failed)
+[2024-01-08 10:20:17] Exiting program  ------------------------------------------------
+
+[2024-01-08 10:26:01] Starting program ------------------------------------------------
+[2024-01-08 10:26:06] [INFORMATIONAL] Trying to create company...
+[2024-01-08 10:26:09] [INFORMATIONAL] Company created successfully!
+[2024-01-08 10:26:29] [INFORMATIONAL] Trying to remove company...
+[2024-01-08 10:26:29] [INFORMATIONAL] Company successfuly deleted!
+[2024-01-08 10:26:33] Exiting program  ------------------------------------------------
+
+[2024-01-08 10:26:48] Starting program ------------------------------------------------
+[2024-01-08 10:26:54] [INFORMATIONAL] Trying to create company...
+[2024-01-08 10:26:57] [INFORMATIONAL] Company created successfully!
+[2024-01-08 10:27:05] [INFORMATIONAL] Trying to create company...
+[2024-01-08 10:27:07] [INFORMATIONAL] Company created successfully!
+[2024-01-08 10:27:13] [INFORMATIONAL] Trying to create company...
+[2024-01-08 10:27:17] [INFORMATIONAL] Company created successfully!
+[2024-01-08 10:27:23] [INFORMATIONAL] Trying to remove company...
+[2024-01-08 10:27:23] [INFORMATIONAL] Company successfuly deleted!
+[2024-01-08 10:27:40] [INFORMATIONAL] Trying to remove company...
+[2024-01-08 10:27:40] [ERROR] Failed to reallocate the companies array!(realloc failed)
+[2024-01-08 10:27:40] [WARNING] The array couldn't be resized!
+[2024-01-08 10:27:40] [INFORMATIONAL] Company successfuly deleted!
+[2024-01-08 10:28:10] Exiting program  ------------------------------------------------
+
+[2024-01-08 10:29:42] Starting program ------------------------------------------------
+[2024-01-08 10:29:52] [INFORMATIONAL] Trying to create company...
+[2024-01-08 10:29:55] [INFORMATIONAL] Company created successfully!
+[2024-01-08 10:30:06] Exiting program  ------------------------------------------------
+
+[2024-01-08 13:12:14] Starting program ------------------------------------------------
+[2024-01-08 13:12:21] [INFORMATIONAL] Trying to create company...
+[2024-01-08 13:12:28] [INFORMATIONAL] Company created successfully!
+[2024-01-08 13:12:48] Exiting program  ------------------------------------------------
+
+[2024-01-08 13:30:15] Starting program ------------------------------------------------
+[2024-01-08 13:30:30] [INFORMATIONAL] Trying to create company...
+[2024-01-08 13:30:36] [INFORMATIONAL] Company created successfully!
+[2024-01-08 13:30:48] Exiting program  ------------------------------------------------
+
+[2024-01-10 10:09:26] Starting program ------------------------------------------------
+[2024-01-10 10:09:45] [INFORMATIONAL] Trying to create company...
+[2024-01-10 10:09:49] [INFORMATIONAL] Company created successfully!
+[2024-01-10 10:09:53] [INFORMATIONAL] Listing companies...
+[2024-01-10 10:09:53] [INFORMATIONAL] Companies listed successfuly!
+[2024-01-10 10:10:09] Exiting program  ------------------------------------------------
+
+[2024-01-10 10:40:31] Starting program ------------------------------------------------
+[2024-01-10 10:40:36] [INFORMATIONAL] Trying to create company...
+[2024-01-10 10:40:41] [INFORMATIONAL] Company created successfully!
+[2024-01-10 10:41:01] [INFORMATIONAL] Trying to edit company...
+[2024-01-10 10:41:03] [INFORMATIONAL] Edited the company successfuly!
+[2024-01-10 10:41:13] [INFORMATIONAL] Trying to remove company...
+[2024-01-10 10:41:13] [INFORMATIONAL] Company successfuly deleted!
+[2024-01-10 10:41:17] Exiting program  ------------------------------------------------
+
