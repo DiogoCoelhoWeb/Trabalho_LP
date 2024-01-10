@@ -48,7 +48,6 @@ void logMsg(char *msg, LogLevel level, char *filename) {
         fprintf(fp, "[%d-%02d-%02d %02d:%02d:%02d] [%s] %s\n", tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday, tm->tm_hour, tm->tm_min, tm->tm_sec, print_severity(level), msg);
     }
 
-
     fclose(fp);
 }
 
