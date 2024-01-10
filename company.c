@@ -403,7 +403,8 @@ void remove_comp(Companies *companies) {
             companies->companies = companiestmp;
             companies->comp_mem_size = companies->n_comp * COMPANY_MULT_FACTOR;
         }else{
-            logMsg("Failed to resize the companies array!(realloc failed)", ERROR, LOG_FILE);
+            logMsg("Failed to reallocate the companies array!(realloc failed)", ERROR, LOG_FILE);
+            logMsg("The array couldn't be resized!", WARNING, LOG_FILE);
         }
     }
 

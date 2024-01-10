@@ -26,8 +26,19 @@ typedef enum {
     NOLEVEL
 } LogLevel;
 
+/**
+ * @brief Prints the string with the log severity name
+ * @param level Severity level value
+ * @return Returns the string with the severity level name
+ */
 char* print_severity(LogLevel level);
 
+/**
+ * @brief Prints a message to the log file
+ * @param msg Message to be printed
+ * @param level Severity level of the message
+ * @param filename Log file where the message will be written
+ */
 void logMsg(char *msg, LogLevel level, char *filename);
 
 #endif /* LOG_GEN_H */
