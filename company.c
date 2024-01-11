@@ -155,6 +155,7 @@ void insert_comp(Companies *companies) {
 
     if (search_comp(*companies, NIF) != -1) {
         puts("Company already exists!");
+        pause_exec();
         return;
     }
 
@@ -167,6 +168,7 @@ void insert_comp(Companies *companies) {
             logMsg("Failed to reallocate memory on the heap!(realloc failed)", ERROR, LOG_FILE);
             logMsg("The company couldn't be created!", WARNING, LOG_FILE);
             puts("Error creating company!");
+            pause_exec();
             return;
         }
 
