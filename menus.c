@@ -12,9 +12,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "utilities.h"
 #include "menus.h"
+#include "user.h"
 #include "company.h"
+#include "utilities.h"
+#include "input.h"
 
 //Main menu
 const char *PROFILE_OPTIONS[PROFILE_OPTION_SIZE] = {"Administrator", "User"};
@@ -24,8 +26,11 @@ const char *ADMIN_OPTIONS[ADMIN_OPTION_SIZE] = {"Manage Comapnies Catalog", "Man
 const char *USER_OPTIONS[USER_OPTION_SIZE] = {"Search Company", "Rate Company", "Comment Company", "Go Back"};
 
 //Admin menu
-const char *MANAGE_CATALOG_OPTIONS[MANAGE_CATALOG_OPTION_SIZE] = {"Create Company", "Edit Company", "Remove Company", "List Companies","Go Back"};
+const char *MANAGE_CATALOG_OPTIONS[MANAGE_CATALOG_OPTION_SIZE] = {"Create Company", "Edit Company", "Remove Company", "List Companies", "Go Back"};
 const char *MANAGE_ACT_BRANCH_OPTIONS[MANAGE_ACT_BRANCH_OPTION_SIZE] = {"Create Activity Branch", "Edit Activity Branch", "Remove Activity Branch", "Reactivate Activity Branch", "Go Back"};
+
+//User menu
+const char *USER_SEARCH_COMP_OPTIONS[USER_SEARCH_COMP_OPTION_SIZE] = {"Search by NIF", "Search by Category", "Search by Name", "Go Back"};
 
 /*ADMIN OPTIONS*/
 
@@ -33,9 +38,9 @@ void manage_comp_catalog(int *main_op, Companies *companies) {
     int op;
 
     do {
-        
+
         clear_screen();
-        
+
         op = menu(MANAGE_CATALOG_OPTION_SIZE, "Admin - Companies Catalog", MANAGE_CATALOG_OPTIONS);
 
         switch (op) {
@@ -54,7 +59,7 @@ void manage_comp_catalog(int *main_op, Companies *companies) {
             case 4:
                 list_comp(*companies);
                 break;
-                
+
             case 5:
                 break;
 
@@ -67,11 +72,11 @@ void manage_comp_catalog(int *main_op, Companies *companies) {
 
 void manage_act_branches(int *main_op) {
     int op;
-    
+
     do {
-        
+
         clear_screen();
-        
+
         op = menu(MANAGE_ACT_BRANCH_OPTION_SIZE, "Admin - Activity Branches", MANAGE_ACT_BRANCH_OPTIONS);
 
         switch (op) {
@@ -102,11 +107,11 @@ void manage_act_branches(int *main_op) {
 
 void admin_menu(int *main_op, Companies *companies) {
     int op;
-    
+
     do {
-        
+
         clear_screen();
-        
+
         op = menu(ADMIN_OPTION_SIZE, "Administrator", ADMIN_OPTIONS);
 
         switch (op) {
@@ -134,26 +139,67 @@ void admin_menu(int *main_op, Companies *companies) {
 
 /*USER OPTIONS*/
 
+void search_comp_menu(int *main_op, Companies *companies) {
+    int op;
+
+    do {
+
+        clear_screen();
+
+        op = menu(USER_OPTION_SIZE, "User - Search Company", USER_SEARCH_COMP_OPTIONS);
+
+        switch (op) {
+            case 1:
+                user_search_comp(*companies, NIF_SEARCH);
+                break;
+
+            case 2:
+                user_search_comp(*companies, CATEGORY_SEARCH);
+                break;
+
+            case 3:
+                user_search_comp(*companies, NAME_SEARCH);
+                break;
+
+            case 4:
+                break;
+
+            case 0:
+                *main_op = 0;
+                break;
+        }
+    } while (op != 0 && op != 4 && *main_op != 0);
+}
+
 void user_menu(int *main_op, Companies *companies) {
     int op;
+
+    char name[NAME_USER_SIZE];
+    char email[EMAIL_USER_SIZE];
+    
+    clear_screen();
+    get_confirm_string(name, "Enter your name: ", "Are you sure you want to keep this name?", NAME_USER_SIZE, 0);
+    
+    clear_screen();
+    get_confirm_string(email, "Enter your email: ", "Are you sure you want to keep this name?", EMAIL_USER_SIZE, 0);
     
     do {
-        
+
         clear_screen();
-        
+
         op = menu(USER_OPTION_SIZE, "User", USER_OPTIONS);
 
         switch (op) {
             case 1:
-                //TODO: search_comp();
+                search_comp_menu(main_op, companies);
                 break;
 
             case 2:
-                //TODO: rate_comp();
+                rate_comp(companies, name, email);
                 break;
 
             case 3:
-                //TODO: comment_comp();
+                comment_comp(companies, name, email);
                 break;
 
             case 4:
@@ -171,11 +217,11 @@ void user_menu(int *main_op, Companies *companies) {
 void main_menu(Companies *companies) {
 
     int op;
-    
+
     do {
-        
+
         clear_screen();
-        
+
         op = menu(PROFILE_OPTION_SIZE, "Menu", PROFILE_OPTIONS);
 
         switch (op) {

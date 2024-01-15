@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "utilities.h"
+
 #define INVALID_MESSAGE "Invalid value"
 
 void cleanInputBuffer() {
@@ -68,4 +70,27 @@ void getString(char *string, unsigned int size, char *msg) {
             cleanInputBuffer();
         }
     }
+}
+
+int get_confirm_string(char *str, char *phrase, char *menu_phrase, int size, int cancel) {
+
+    int confirm;
+
+    char aux[size];
+
+    do {
+        clear_screen();
+        
+        getString(aux, size, phrase);
+
+        printf("\n");
+        
+        confirm = confirm_menu(menu_phrase, cancel);
+
+        if (confirm == 1) {
+            strncpy(str, aux, size);
+            return 1;
+        }
+    } while (confirm != 1 && confirm != 0);
+    return 0;
 }
