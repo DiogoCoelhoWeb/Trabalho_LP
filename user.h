@@ -32,7 +32,7 @@ void show_comment(char *name, char *email, char *title, char *text);
  * @param companies The companies array
  * @param search_type The type of search the user chose
  */
-void user_search_comp(Companies companies, SearchType search_type);
+void user_search_comp(Companies companies, Activity_Branches activity_branches, SearchType search_type);
 
 /**
  * @brief Let's the user rate a company
@@ -40,7 +40,7 @@ void user_search_comp(Companies companies, SearchType search_type);
  * @param name The name of the user
  * @param email The email of the user
  */
-void rate_comp(Companies *companies, char *name, char *email);
+void rate_comp(Companies *companies, Activity_Branches activity_branches, char *name, char *email);
 
 
 /**
@@ -49,7 +49,7 @@ void rate_comp(Companies *companies, char *name, char *email);
  * @param name The name of the user
  * @param email The email of the user
  */
-void comment_comp(Companies *companies, char *name, char *email);
+void comment_comp(Companies *companies, Activity_Branches activity_branches, char *name, char *email);
 
 #endif /* USER_H */
 

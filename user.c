@@ -27,7 +27,7 @@ void show_comment(char *name, char *email, char *title, char *text) {
     printf("-----------------------------------------------------------------\n");
 }
 
-void user_search_comp(Companies companies, SearchType search_type) {
+void user_search_comp(Companies companies, Activity_Branches activity_branches, SearchType search_type) {
 
     int NIF;
     int confirm_option;
@@ -55,7 +55,7 @@ void user_search_comp(Companies companies, SearchType search_type) {
                 return;
             }
 
-            show_comp(companies.companies[comp]);
+            show_comp(companies.companies[comp], activity_branches);
             pause_exec();
             break;
             
@@ -72,7 +72,7 @@ void user_search_comp(Companies companies, SearchType search_type) {
 
             for (int i = 0; i < companies.n_comp; i++) {
                 if (strcmp(name, companies.companies[i].name) == 0) {
-                    show_comp(companies.companies[i]);
+                    show_comp(companies.companies[i], activity_branches);
                 }
             }
             pause_exec();
@@ -92,7 +92,7 @@ void user_search_comp(Companies companies, SearchType search_type) {
 
             for (int i = 0; i < companies.n_comp; i++) {
                 if (cat == companies.companies[i].category) {
-                    show_comp(companies.companies[i]);
+                    show_comp(companies.companies[i], activity_branches);
                 }
             }
             pause_exec();
@@ -100,7 +100,7 @@ void user_search_comp(Companies companies, SearchType search_type) {
     }
 }
 
-void rate_comp(Companies *companies, char *name, char *email) {
+void rate_comp(Companies *companies, Activity_Branches activity_branches, char *name, char *email) {
     int NIF;
     int comp_position;
     int confirm_comp;
@@ -128,7 +128,7 @@ void rate_comp(Companies *companies, char *name, char *email) {
             continue;
         }
 
-        show_comp(companies->companies[comp_position]);
+        show_comp(companies->companies[comp_position], activity_branches);
 
         confirm_comp = confirm_menu("Are you sure you want to rate this company?", 1);
 
@@ -167,7 +167,7 @@ void rate_comp(Companies *companies, char *name, char *email) {
 
 }
 
-void comment_comp(Companies *companies, char *name, char *email) {
+void comment_comp(Companies *companies, Activity_Branches activity_branches, char *name, char *email) {
     int NIF;
     int comp_position;
     int confirm_comp;
@@ -197,7 +197,7 @@ void comment_comp(Companies *companies, char *name, char *email) {
             continue;
         }
 
-        show_comp(companies->companies[comp_position]);
+        show_comp(companies->companies[comp_position], activity_branches);
 
         confirm_comp = confirm_menu("Are you sure you want to comment this company?", 1);
 

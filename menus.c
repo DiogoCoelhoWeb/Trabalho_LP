@@ -22,19 +22,19 @@
 const char *PROFILE_OPTIONS[PROFILE_OPTION_SIZE] = {"Administrator", "User"};
 
 //Profile menus
-const char *ADMIN_OPTIONS[ADMIN_OPTION_SIZE] = {"Manage Comapnies Catalog", "Manage Activity Branches", "View Reports", "Go Back"};
+const char *ADMIN_OPTIONS[ADMIN_OPTION_SIZE] = {"Manage Companies Catalog", "Manage Activity Branches", "View Reports", "Go Back"};
 const char *USER_OPTIONS[USER_OPTION_SIZE] = {"Search Company", "Rate Company", "Comment Company", "Go Back"};
 
 //Admin menu
 const char *MANAGE_CATALOG_OPTIONS[MANAGE_CATALOG_OPTION_SIZE] = {"Create Company", "Edit Company", "Remove Company", "List Companies", "Go Back"};
-const char *MANAGE_ACT_BRANCH_OPTIONS[MANAGE_ACT_BRANCH_OPTION_SIZE] = {"Create Activity Branch", "Edit Activity Branch", "Remove Activity Branch", "Reactivate Activity Branch", "Go Back"};
+const char *MANAGE_ACT_BRANCH_OPTIONS[MANAGE_ACT_BRANCH_OPTION_SIZE] = {"Create Activity Branch", "Edit Activity Branch", "Remove Activity Branch", "List Activity Branches", "Go Back"};
 
 //User menu
 const char *USER_SEARCH_COMP_OPTIONS[USER_SEARCH_COMP_OPTION_SIZE] = {"Search by NIF", "Search by Category", "Search by Name", "Go Back"};
 
 /*ADMIN OPTIONS*/
 
-void manage_comp_catalog(int *main_op, Companies *companies) {
+void manage_comp_catalog(int *main_op, Companies *companies, Activity_Branches activity_branches) {
     int op;
 
     do {
@@ -45,19 +45,19 @@ void manage_comp_catalog(int *main_op, Companies *companies) {
 
         switch (op) {
             case 1:
-                insert_comp(companies);
+                insert_comp(companies, activity_branches);
                 break;
 
             case 2:
-                edit_comp(companies, main_op);
+                edit_comp(companies, activity_branches, main_op);
                 break;
 
             case 3:
-                remove_comp(companies);
+                remove_comp(companies, activity_branches);
                 break;
 
             case 4:
-                list_comp(*companies);
+                list_comp(*companies, activity_branches);
                 break;
 
             case 5:
@@ -70,7 +70,7 @@ void manage_comp_catalog(int *main_op, Companies *companies) {
     } while (op != 0 && op != 5 && *main_op != 0);
 }
 
-void manage_act_branches(int *main_op) {
+void manage_act_branches(int *main_op, Activity_Branches *activity_branches, Companies *companies) {
     int op;
 
     do {
@@ -81,19 +81,19 @@ void manage_act_branches(int *main_op) {
 
         switch (op) {
             case 1:
-                //TODO: insert_act_branch();
+                insert_act_branch(activity_branches);
                 break;
 
             case 2:
-                //TODO: edit_act_branch();
+                edit_act_branch(activity_branches, main_op);
                 break;
 
             case 3:
-                //TODO: remove_act_branch();
+                remove_act_branch(activity_branches, *companies);
                 break;
 
             case 4:
-                //TODO: reactivate_act_branch();
+                list_act_branch(*activity_branches);
                 break;
             case 5:
                 break;
@@ -105,7 +105,7 @@ void manage_act_branches(int *main_op) {
     } while (op != 0 && op != 5 && *main_op != 0);
 }
 
-void admin_menu(int *main_op, Companies *companies) {
+void admin_menu(int *main_op, Companies *companies, Activity_Branches *activity_branches) {
     int op;
 
     do {
@@ -116,15 +116,15 @@ void admin_menu(int *main_op, Companies *companies) {
 
         switch (op) {
             case 1:
-                manage_comp_catalog(main_op, companies);
+                manage_comp_catalog(main_op, companies, *activity_branches);
                 break;
 
             case 2:
-                manage_act_branches(main_op);
+                manage_act_branches(main_op, activity_branches, companies);
                 break;
 
             case 3:
-                //TODO: show_reports();
+                show_reports(*companies, main_op);
                 break;
 
             case 4:
@@ -139,7 +139,7 @@ void admin_menu(int *main_op, Companies *companies) {
 
 /*USER OPTIONS*/
 
-void search_comp_menu(int *main_op, Companies *companies) {
+void search_comp_menu(int *main_op, Companies *companies, Activity_Branches activity_branches) {
     int op;
 
     do {
@@ -150,15 +150,15 @@ void search_comp_menu(int *main_op, Companies *companies) {
 
         switch (op) {
             case 1:
-                user_search_comp(*companies, NIF_SEARCH);
+                user_search_comp(*companies, activity_branches, NIF_SEARCH);
                 break;
 
             case 2:
-                user_search_comp(*companies, CATEGORY_SEARCH);
+                user_search_comp(*companies, activity_branches, CATEGORY_SEARCH);
                 break;
 
             case 3:
-                user_search_comp(*companies, NAME_SEARCH);
+                user_search_comp(*companies, activity_branches, NAME_SEARCH);
                 break;
 
             case 4:
@@ -171,7 +171,7 @@ void search_comp_menu(int *main_op, Companies *companies) {
     } while (op != 0 && op != 4 && *main_op != 0);
 }
 
-void user_menu(int *main_op, Companies *companies) {
+void user_menu(int *main_op, Companies *companies, Activity_Branches activity_branches) {
     int op;
 
     char name[NAME_USER_SIZE];
@@ -191,15 +191,15 @@ void user_menu(int *main_op, Companies *companies) {
 
         switch (op) {
             case 1:
-                search_comp_menu(main_op, companies);
+                search_comp_menu(main_op, companies, activity_branches);
                 break;
 
             case 2:
-                rate_comp(companies, name, email);
+                rate_comp(companies, activity_branches, name, email);
                 break;
 
             case 3:
-                comment_comp(companies, name, email);
+                comment_comp(companies, activity_branches, name, email);
                 break;
 
             case 4:
@@ -214,7 +214,7 @@ void user_menu(int *main_op, Companies *companies) {
 
 /*MAIN MENU*/
 
-void main_menu(Companies *companies) {
+void main_menu(Companies *companies, Activity_Branches *activity_branches) {
 
     int op;
 
@@ -226,11 +226,11 @@ void main_menu(Companies *companies) {
 
         switch (op) {
             case ADMIN:
-                admin_menu(&op, companies);
+                admin_menu(&op, companies, activity_branches);
                 break;
 
             case USER:
-                user_menu(&op, companies);
+                user_menu(&op, companies, *activity_branches);
                 break;
 
             case 0:
