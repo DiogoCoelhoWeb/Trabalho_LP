@@ -8,6 +8,7 @@
 #include "company.h"
 
 #include "company.h"
+#include "user.h"
 
 /**@file menus.h
  * @author Diogo Coelho
@@ -30,6 +31,9 @@
 #define MANAGE_ACT_BRANCH_OPTION_SIZE 5
 #define SHOW_REPORTS_OPTION_SIZE      4
 
+//User menu
+#define USER_SEARCH_COMP_OPTION_SIZE  4
+
 enum Profiles {
     ADMIN = 1,
     USER
@@ -39,13 +43,15 @@ enum Profiles {
 
 /**
  * @brief This function generates the menu for the company catalog management
- * @param main_op
+ * @param main_op The pointer to the option on the main menu so that the user can quit at any time
+ * @param companies The pointe to the companies array to be used troughout the program
  */
 void manage_comp_catalog(int *main_op, Companies *companies);
 
 /**
  * @brief This function generates the menu for the activity branch management
- * @param main_op
+ * @param main_op The pointer to the option on the main menu so that the user can quit at any time
+ * @param companies The pointe to the companies array to be used troughout the program
  */
 void manage_act_branches(int *main_op);
 
@@ -53,13 +59,15 @@ void manage_act_branches(int *main_op);
 
 /**
  * @brief This function generates the menu for the profile ADMIN
- * @param main_op
+ * @param main_op The pointer to the option on the main menu so that the user can quit at any time
+ * @param companies The pointe to the companies array to be used troughout the program
  */
 void admin_menu(int *main_op, Companies *companies);
 
 /**
  * @brief This function generates the menu for the profile USER
- * @param main_op
+ * @param main_op The pointer to the option on the main menu so that the user can quit at any time
+ * @param companies The pointe to the companies array to be used troughout the program
  */
 void user_menu(int *main_op, Companies *companies);
 
