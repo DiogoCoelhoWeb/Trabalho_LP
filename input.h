@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/cFiles/file.h to edit this template
  */
 
-/* 
- * File:   input.h
- * Author: Diogo Coelho
- *
- * Created on 7 de dezembro de 2023, 16:25
+/**@file main.c 
+ * @author Diogo Coelho
+ * @version 1.0
+ * @date 7 de dezembro de 2023, 16:25
  */
 
 #ifndef INPUT_H
@@ -59,6 +58,8 @@ char getChar(char *msg);
  * @param msg Message to be displayed to the user
  */
 void getString(char *string, unsigned int size, char *msg);
+
+int get_confirm_string(char *str, char *phrase, char *menu_phrase, int size, int cancel);
 
 #endif /* INPUT_H */
 

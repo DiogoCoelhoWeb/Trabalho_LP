@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/cFiles/file.h to edit this template
  */
 
-/* 
- * File:   utilities.h
- * Author: Diogo Coelho
- *
- * Created on 7 de dezembro de 2023, 17:05
+/**@file main.c 
+ * @author Diogo Coelho
+ * @version 1.0
+ * @date 7 de dezembro de 2023, 17:05
  */
 
 #ifndef UTILITIES_H
