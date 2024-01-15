@@ -1,6 +1,7 @@
-build/Debug/Cygwin-Windows/menus.o: menus.c utilities.h menus.h company.h \
- input.h
-utilities.h:
+build/Debug/Cygwin-Windows/menus.o: menus.c menus.h company.h input.h \
+ user.h utilities.h
 menus.h:
 company.h:
 input.h:
+user.h:
+utilities.h:

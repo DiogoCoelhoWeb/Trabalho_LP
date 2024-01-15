@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/cFiles/file.h to edit this template
  */
 
-/* 
- * File:   log_gen.h
- * Author: Diogo Coelho
- *
- * Created on 6 de janeiro de 2024, 09:49
+/**@file main.c 
+ * @author Diogo Coelho
+ * @version 1.0
+ * @date 6 de janeiro de 2024, 09:49
  */
 
 #ifndef LOG_GEN_H

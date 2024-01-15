@@ -1,64 +1,217 @@
-[2024-01-08 10:19:18] Starting program ------------------------------------------------
-[2024-01-08 10:19:23] [INFORMATIONAL] Trying to create company...
-[2024-01-08 10:19:28] [INFORMATIONAL] Company created successfully!
-[2024-01-08 10:19:37] [INFORMATIONAL] Trying to remove company...
-[2024-01-08 10:19:37] [INFORMATIONAL] Company successfuly deleted!
-[2024-01-08 10:19:39] Exiting program  ------------------------------------------------
+[2024-01-11 14:23:22] [INFORMATIONAL] Edited the company successfuly!
+[2024-01-11 14:23:22] Exiting program  ------------------------------------------------
 
-[2024-01-08 10:20:17] Starting program ------------------------------------------------
-[2024-01-08 10:20:17] [ERROR] Error allocating memmory on the heap!(malloc failed)
-[2024-01-08 10:20:17] Exiting program  ------------------------------------------------
+[2024-01-11 14:24:48] Starting program ------------------------------------------------
+[2024-01-11 14:24:51] [INFORMATIONAL] Trying to create company...
+[2024-01-11 14:24:54] [INFORMATIONAL] Company created successfully!
+[2024-01-11 14:25:02] [INFORMATIONAL] Trying to edit company...
+[2024-01-11 14:25:20] [INFORMATIONAL] Edited the company successfuly!
+[2024-01-11 14:25:20] Exiting program  ------------------------------------------------
 
-[2024-01-08 10:26:01] Starting program ------------------------------------------------
-[2024-01-08 10:26:06] [INFORMATIONAL] Trying to create company...
-[2024-01-08 10:26:09] [INFORMATIONAL] Company created successfully!
-[2024-01-08 10:26:29] [INFORMATIONAL] Trying to remove company...
-[2024-01-08 10:26:29] [INFORMATIONAL] Company successfuly deleted!
-[2024-01-08 10:26:33] Exiting program  ------------------------------------------------
+[2024-01-11 14:26:53] Starting program ------------------------------------------------
+[2024-01-11 14:26:59] [INFORMATIONAL] Trying to create company...
+[2024-01-11 14:27:49] [INFORMATIONAL] Company created successfully!
+[2024-01-11 14:28:04] [INFORMATIONAL] Listing companies...
+[2024-01-11 14:28:04] [INFORMATIONAL] Companies listed successfuly!
+[2024-01-11 14:28:10] Exiting program  ------------------------------------------------
 
-[2024-01-08 10:26:48] Starting program ------------------------------------------------
-[2024-01-08 10:26:54] [INFORMATIONAL] Trying to create company...
-[2024-01-08 10:26:57] [INFORMATIONAL] Company created successfully!
-[2024-01-08 10:27:05] [INFORMATIONAL] Trying to create company...
-[2024-01-08 10:27:07] [INFORMATIONAL] Company created successfully!
-[2024-01-08 10:27:13] [INFORMATIONAL] Trying to create company...
-[2024-01-08 10:27:17] [INFORMATIONAL] Company created successfully!
-[2024-01-08 10:27:23] [INFORMATIONAL] Trying to remove company...
-[2024-01-08 10:27:23] [INFORMATIONAL] Company successfuly deleted!
-[2024-01-08 10:27:40] [INFORMATIONAL] Trying to remove company...
-[2024-01-08 10:27:40] [ERROR] Failed to reallocate the companies array!(realloc failed)
-[2024-01-08 10:27:40] [WARNING] The array couldn't be resized!
-[2024-01-08 10:27:40] [INFORMATIONAL] Company successfuly deleted!
-[2024-01-08 10:28:10] Exiting program  ------------------------------------------------
+[2024-01-11 14:28:31] Starting program ------------------------------------------------
+[2024-01-11 14:28:35] [INFORMATIONAL] Trying to create company...
+[2024-01-11 14:29:22] [INFORMATIONAL] Company created successfully!
+[2024-01-11 14:29:26] [INFORMATIONAL] Listing companies...
+[2024-01-11 14:29:26] [INFORMATIONAL] Companies listed successfuly!
+[2024-01-11 14:29:39] Exiting program  ------------------------------------------------
 
-[2024-01-08 10:29:42] Starting program ------------------------------------------------
-[2024-01-08 10:29:52] [INFORMATIONAL] Trying to create company...
-[2024-01-08 10:29:55] [INFORMATIONAL] Company created successfully!
-[2024-01-08 10:30:06] Exiting program  ------------------------------------------------
+[2024-01-11 14:29:58] Starting program ------------------------------------------------
+[2024-01-11 14:30:02] [INFORMATIONAL] Trying to create company...
+[2024-01-11 14:30:39] [INFORMATIONAL] Company created successfully!
+[2024-01-11 14:30:51] Exiting program  ------------------------------------------------
 
-[2024-01-08 13:12:14] Starting program ------------------------------------------------
-[2024-01-08 13:12:21] [INFORMATIONAL] Trying to create company...
-[2024-01-08 13:12:28] [INFORMATIONAL] Company created successfully!
-[2024-01-08 13:12:48] Exiting program  ------------------------------------------------
+[2024-01-11 14:31:16] Starting program ------------------------------------------------
+[2024-01-11 14:31:19] [INFORMATIONAL] Trying to create company...
+[2024-01-11 14:31:26] [INFORMATIONAL] Company created successfully!
+[2024-01-11 14:31:35] [INFORMATIONAL] Trying to edit company...
+[2024-01-11 14:32:12] [INFORMATIONAL] Changed the company's name
+[2024-01-11 14:32:40] [INFORMATIONAL] Changed the company's name
+[2024-01-11 14:33:22] [INFORMATIONAL] Changed the company's name
+[2024-01-11 14:33:27] [INFORMATIONAL] Edited the company successfuly!
+[2024-01-11 14:33:27] Exiting program  ------------------------------------------------
 
-[2024-01-08 13:30:15] Starting program ------------------------------------------------
-[2024-01-08 13:30:30] [INFORMATIONAL] Trying to create company...
-[2024-01-08 13:30:36] [INFORMATIONAL] Company created successfully!
-[2024-01-08 13:30:48] Exiting program  ------------------------------------------------
+[2024-01-11 14:52:24] Starting program ------------------------------------------------
+[2024-01-11 14:52:44] Starting program ------------------------------------------------
+[2024-01-11 15:15:40] Exiting program  ------------------------------------------------
 
-[2024-01-10 10:09:26] Starting program ------------------------------------------------
-[2024-01-10 10:09:45] [INFORMATIONAL] Trying to create company...
-[2024-01-10 10:09:49] [INFORMATIONAL] Company created successfully!
-[2024-01-10 10:09:53] [INFORMATIONAL] Listing companies...
-[2024-01-10 10:09:53] [INFORMATIONAL] Companies listed successfuly!
-[2024-01-10 10:10:09] Exiting program  ------------------------------------------------
+[2024-01-11 15:15:56] Starting program ------------------------------------------------
+[2024-01-11 15:16:05] Exiting program  ------------------------------------------------
 
-[2024-01-10 10:40:31] Starting program ------------------------------------------------
-[2024-01-10 10:40:36] [INFORMATIONAL] Trying to create company...
-[2024-01-10 10:40:41] [INFORMATIONAL] Company created successfully!
-[2024-01-10 10:41:01] [INFORMATIONAL] Trying to edit company...
-[2024-01-10 10:41:03] [INFORMATIONAL] Edited the company successfuly!
-[2024-01-10 10:41:13] [INFORMATIONAL] Trying to remove company...
-[2024-01-10 10:41:13] [INFORMATIONAL] Company successfuly deleted!
-[2024-01-10 10:41:17] Exiting program  ------------------------------------------------
+[2024-01-11 15:16:10] Starting program ------------------------------------------------
+[2024-01-11 15:16:18] [INFORMATIONAL] Trying to create company...
+[2024-01-11 15:16:21] [INFORMATIONAL] Company created successfully!
+[2024-01-11 15:16:39] Exiting program  ------------------------------------------------
+
+[2024-01-12 11:52:14] Starting program ------------------------------------------------
+[2024-01-12 11:53:00] Exiting program  ------------------------------------------------
+
+[2024-01-12 12:03:31] Starting program ------------------------------------------------
+[2024-01-12 12:03:36] [INFORMATIONAL] Trying to create company...
+[2024-01-12 12:03:39] [INFORMATIONAL] Company created successfully!
+[2024-01-12 12:05:46] Starting program ------------------------------------------------
+[2024-01-12 12:05:50] [INFORMATIONAL] Trying to create company...
+[2024-01-12 12:05:55] [INFORMATIONAL] Company created successfully!
+[2024-01-12 12:06:49] [INFORMATIONAL] Listing companies...
+[2024-01-12 12:06:49] [INFORMATIONAL] Companies listed successfuly!
+[2024-01-12 12:06:54] Exiting program  ------------------------------------------------
+
+[2024-01-12 12:08:46] Starting program ------------------------------------------------
+[2024-01-12 12:08:58] [INFORMATIONAL] Trying to create company...
+[2024-01-12 12:09:01] [INFORMATIONAL] Company created successfully!
+[2024-01-12 12:09:46] Exiting program  ------------------------------------------------
+
+[2024-01-12 12:10:30] Starting program ------------------------------------------------
+[2024-01-12 12:10:34] [INFORMATIONAL] Trying to create company...
+[2024-01-12 12:10:36] [INFORMATIONAL] Company created successfully!
+[2024-01-12 12:11:25] Exiting program  ------------------------------------------------
+
+[2024-01-12 12:12:05] Starting program ------------------------------------------------
+[2024-01-12 12:12:08] [INFORMATIONAL] Trying to create company...
+[2024-01-12 12:12:11] [INFORMATIONAL] Company created successfully!
+[2024-01-12 12:13:10] Exiting program  ------------------------------------------------
+
+[2024-01-12 12:13:48] Starting program ------------------------------------------------
+[2024-01-12 12:14:09] Exiting program  ------------------------------------------------
+
+[2024-01-15 09:33:05] Starting program ------------------------------------------------
+[2024-01-15 09:33:11] [INFORMATIONAL] Trying to create company...
+[2024-01-15 09:33:13] [INFORMATIONAL] Company created successfully!
+[2024-01-15 09:33:18] [INFORMATIONAL] Listing companies...
+[2024-01-15 09:33:18] [INFORMATIONAL] Companies listed successfuly!
+[2024-01-15 09:38:30] Starting program ------------------------------------------------
+[2024-01-15 09:39:25] [INFORMATIONAL] Trying to create company...
+[2024-01-15 09:39:28] [INFORMATIONAL] Company created successfully!
+[2024-01-15 09:40:40] Exiting program  ------------------------------------------------
+
+[2024-01-15 09:47:25] Starting program ------------------------------------------------
+[2024-01-15 09:52:31] [INFORMATIONAL] Trying to create company...
+[2024-01-15 09:52:34] [INFORMATIONAL] Company created successfully!
+[2024-01-15 09:53:19] Exiting program  ------------------------------------------------
+
+[2024-01-15 09:54:28] Starting program ------------------------------------------------
+[2024-01-15 09:54:32] [INFORMATIONAL] Trying to create company...
+[2024-01-15 09:54:34] [INFORMATIONAL] Company created successfully!
+[2024-01-15 09:55:57] Exiting program  ------------------------------------------------
+
+[2024-01-15 10:19:15] Starting program ------------------------------------------------
+[2024-01-15 10:19:55] Exiting program  ------------------------------------------------
+
+[2024-01-15 10:20:11] Starting program ------------------------------------------------
+[2024-01-15 10:20:15] [INFORMATIONAL] Trying to create company...
+[2024-01-15 10:20:18] [INFORMATIONAL] Company created successfully!
+[2024-01-15 10:20:20] [INFORMATIONAL] Listing companies...
+[2024-01-15 10:20:20] [INFORMATIONAL] Companies listed successfuly!
+[2024-01-15 10:20:58] Exiting program  ------------------------------------------------
+
+[2024-01-15 10:23:52] Starting program ------------------------------------------------
+[2024-01-15 10:24:15] [INFORMATIONAL] Trying to create company...
+[2024-01-15 10:24:18] [INFORMATIONAL] Company created successfully!
+[2024-01-15 10:24:55] Exiting program  ------------------------------------------------
+
+[2024-01-15 20:56:13] Starting program ------------------------------------------------
+[2024-01-15 20:56:24] Exiting program  ------------------------------------------------
+
+[2024-01-15 21:27:43] Starting program ------------------------------------------------
+[2024-01-15 21:27:53] Exiting program  ------------------------------------------------
+
+[2024-01-15 21:28:34] Starting program ------------------------------------------------
+[2024-01-15 21:28:55] Starting program ------------------------------------------------
+[2024-01-15 21:29:52] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:29:59] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:30:11] [INFORMATIONAL] Trying to create company...
+[2024-01-15 21:30:32] [INFORMATIONAL] Company created successfully!
+[2024-01-15 21:30:43] Exiting program  ------------------------------------------------
+
+[2024-01-15 21:49:51] Starting program ------------------------------------------------
+[2024-01-15 21:49:59] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:50:06] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:50:07] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:50:13] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:50:29] [INFORMATIONAL] Trying to create company...
+[2024-01-15 21:50:37] [INFORMATIONAL] Company created successfully!
+[2024-01-15 21:50:49] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:52:18] Starting program ------------------------------------------------
+[2024-01-15 21:52:22] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:52:27] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:52:36] [INFORMATIONAL] Trying to create company...
+[2024-01-15 21:52:41] [INFORMATIONAL] Company created successfully!
+[2024-01-15 21:52:52] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:52:57] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:53:06] [INFORMATIONAL] Trying to create company...
+[2024-01-15 21:53:48] Starting program ------------------------------------------------
+[2024-01-15 21:53:51] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:53:55] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:53:56] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:54:02] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:54:04] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:54:08] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:54:17] [INFORMATIONAL] Trying to create company...
+[2024-01-15 21:54:25] [INFORMATIONAL] Company created successfully!
+[2024-01-15 21:54:31] [INFORMATIONAL] Listing companies...
+[2024-01-15 21:54:31] [INFORMATIONAL] Companies listed successfuly!
+[2024-01-15 21:56:00] [INFORMATIONAL] Listing companies...
+[2024-01-15 21:56:00] [INFORMATIONAL] Companies listed successfuly!
+[2024-01-15 21:56:06] Exiting program  ------------------------------------------------
+
+[2024-01-15 21:56:18] Starting program ------------------------------------------------
+[2024-01-15 21:56:26] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:56:30] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:56:42] [INFORMATIONAL] Trying to create company...
+[2024-01-15 21:56:47] [INFORMATIONAL] Company created successfully!
+[2024-01-15 21:56:56] [INFORMATIONAL] Trying to edit company...
+[2024-01-15 21:57:02] [INFORMATIONAL] Changed the company's activity branch
+[2024-01-15 21:57:09] [INFORMATIONAL] Edited the company successfuly!
+[2024-01-15 21:57:16] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 21:57:20] [INFORMATIONAL] Branch created successfully
+[2024-01-15 21:57:30] [INFORMATIONAL] Trying to edit company...
+[2024-01-15 21:57:35] [INFORMATIONAL] Changed the company's activity branch
+[2024-01-15 21:57:43] [INFORMATIONAL] Edited the company successfuly!
+[2024-01-15 21:57:43] Exiting program  ------------------------------------------------
+
+[2024-01-15 22:19:24] Starting program ------------------------------------------------
+[2024-01-15 22:19:28] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 22:19:32] [INFORMATIONAL] Branch created successfully
+[2024-01-15 22:19:42] Exiting program  ------------------------------------------------
+
+[2024-01-15 23:02:04] Starting program ------------------------------------------------
+[2024-01-15 23:02:10] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:02:14] [INFORMATIONAL] Branch created successfully
+[2024-01-15 23:02:30] Exiting program  ------------------------------------------------
+
+[2024-01-15 23:05:41] Starting program ------------------------------------------------
+[2024-01-15 23:05:45] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:05:48] [INFORMATIONAL] Branch created successfully
+[2024-01-15 23:05:50] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:05:54] [INFORMATIONAL] Branch created successfully
+[2024-01-15 23:06:07] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:06:16] Exiting program  ------------------------------------------------
+
+[2024-01-15 23:07:44] Starting program ------------------------------------------------
+[2024-01-15 23:07:47] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:07:52] [INFORMATIONAL] Branch created successfully
+[2024-01-15 23:07:53] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:07:56] [INFORMATIONAL] Branch created successfully
+[2024-01-15 23:08:00] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:08:04] [INFORMATIONAL] Branch created successfully
+[2024-01-15 23:08:15] Exiting program  ------------------------------------------------
+
+[2024-01-15 23:09:47] Starting program ------------------------------------------------
+[2024-01-15 23:09:49] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:09:54] [INFORMATIONAL] Branch created successfully
+[2024-01-15 23:09:55] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:09:58] [INFORMATIONAL] Branch created successfully
+[2024-01-15 23:10:12] [INFORMATIONAL] Trying to create an activity branch...
+[2024-01-15 23:10:16] [INFORMATIONAL] Branch created successfully
+[2024-01-15 23:10:21] Exiting program  ------------------------------------------------
+
+[2024-01-15 23:28:56] Starting program ------------------------------------------------
+[2024-01-15 23:45:48] Starting program ------------------------------------------------
+[2024-01-15 23:46:00] Exiting program  ------------------------------------------------
 
